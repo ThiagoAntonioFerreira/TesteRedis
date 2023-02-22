@@ -9,5 +9,8 @@ First of all, open your visual studio or vscode. I'm using visual studio comunit
 
 File ->  new -> project - Console App.
 
+Before start the code, you should download redis from the link https://redis.io/download/. I'm using docker, so I've created a container with redis like this:
 
- 
+![image](https://user-images.githubusercontent.com/2035948/220613418-fe8e88a2-3e90-4939-8e14-c9a6f2717663.png)
+
+
