@@ -4,3 +4,10 @@ Now, I'm working in a project that manipulate a huge of informations, but some i
 So, I've created a structure to maintain this information in chace for a period of time.
 
 You can use my example .
+
+First of all, open your visual studio or vscode. I'm using visual studio comunity 2002.
+
+File ->  new -> project - Console App.
+
+
+ 
