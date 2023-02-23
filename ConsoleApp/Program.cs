@@ -1,17 +1,19 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using Microsoft.Extensions.Caching.Distributed;
 using StackExchange.Redis;
-using System.Text.Json;
 
 
 
 try
 {
-    ConnectionMultiplexer conn = ConnectionMultiplexer.Connect("localhost");
+    var options = ConfigurationOptions.Parse("3.85.129.153:6379"); // host1:port1, host2:port2, ...
+    options.Password = "mypass";
+    ConnectionMultiplexer conn = ConnectionMultiplexer.Connect(options);
+
     IDatabase database = conn.GetDatabase();
-    database.StringSet("redisKey", "redisvalue");
-    var value = database.StringGet("redisKey");
+
+    database.StringSet("Key", "Value", TimeSpan.FromSeconds(60));
+    var value = database.StringGet("Key");
     Console.WriteLine("Value cached in redis server is: " + value);
     Console.ReadLine();
 }catch(Exception ex)
