@@ -1,5 +1,11 @@
 #Create an example using Redis 
 
+# Título do Projeto
+
+Uma breve descrição sobre o que esse projeto faz e para quem ele é
+
+
+
 
 I'm using Redis to maintain i have some informations. I've created this app to test the redis functionalities.
 
